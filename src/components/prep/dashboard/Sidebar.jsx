@@ -13,9 +13,13 @@ const PrepTopbar = () => {
   ];
 
   return (
+    <>
     <div style={{
-      position: 'sticky',
+      position: 'fixed',
       top: 0,
+      left: '256px',
+      right: 0,
+      height: '64px',
       zIndex: 30,
       backgroundColor: 'rgba(249, 249, 249, 0.85)',
       backdropFilter: 'blur(12px)',
@@ -23,6 +27,7 @@ const PrepTopbar = () => {
       borderBottom: '1px solid #e5e5e5',
     }}>
       <div style={{
+        height: '100%',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -109,6 +114,8 @@ const PrepTopbar = () => {
         </div>
       </div>
     </div>
+    <div style={{ height: '64px', flexShrink: 0 }} />
+    </>
   );
 };
 

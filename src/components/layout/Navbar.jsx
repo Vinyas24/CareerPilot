@@ -31,16 +31,21 @@ const Navbar = () => {
   );
 
   return (
+    <>
     <nav style={{
-      height: '60px',
+      height: '64px',
       borderBottom: '1px solid var(--color-border)',
-      backgroundColor: 'var(--color-background)',
+      backgroundColor: 'rgba(255, 255, 255, 0.85)',
+      backdropFilter: 'blur(12px)',
+      WebkitBackdropFilter: 'blur(12px)',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'space-between',
       padding: '0 32px',
-      position: 'sticky',
+      position: 'fixed',
       top: 0,
+      left: '256px',
+      right: 0,
       zIndex: 50,
     }}>
       <div
@@ -69,6 +74,8 @@ const Navbar = () => {
 
       <div style={{ width: '160px' }} />
     </nav>
+    <div style={{ height: '64px', flexShrink: 0 }} />
+    </>
   );
 };
 
