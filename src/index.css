@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Crimson+Text:wght@400;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans antialiased m-0 p-0;
+    background-color: #f9f9f9;
+    color: #111827;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif tracking-tight font-bold;
+  }
+}
+
+:root {
+  /* Legacy Builder Variables (for backwards compatibility) */
+  --color-background: #F7F6F3;
+  --color-text-primary: #111111;
+  --color-accent: #000000;
+  --color-accent-hover: #333333;
+  --color-success: #4B7F52;
+  --color-warning: #D97706;
+  --color-error: #DC2626;
+  --color-border: #E5E5E5;
+  --color-surface: #FFFFFF;
+  --color-surface-secondary: #FAFAFA;
+  --color-text-secondary: #555555;
+  --color-text-tertiary: #888888;
+  --color-border-hover: #999999;
+
+  :root {
+    /* Job Tracker (KodNest) Variables */
+    --kodnest-bg: #F7F6F3;
+    --kodnest-text: #111111;
+    --kodnest-accent: #8B0000;
+    --kodnest-success: #2F5233;
+    --kodnest-warning: #8B6914;
+    --kodnest-border: #D4D2CC;
+    --kodnest-card: #FFFFFF;
+
+    /* AI Resume Builder Variables */
+    --color-background: #F7F6F3;
+    --color-text-primary: #111111;
+    --color-accent: hsl(245, 58%, 51%);
+    --color-accent-hover: hsl(245, 58%, 45%);
+    --color-success: #4B7F52;
+    --color-warning: #D97706;
+    --color-error: #DC2626;
+    --color-border: #E5E5E5;
+    --color-surface: #FFFFFF;
+    --color-surface-secondary: #FAFAFA;
+    --color-text-secondary: #555555;
+    --color-text-tertiary: #888888;
+    --color-border-hover: #999999;
+
+    --font-heading: 'Georgia', serif;
+    --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --transition-fast: 150ms ease-in-out;
+    --transition-normal: 200ms ease-in-out;
+
+    /* Theme Design Tokens (CareerPilot) */
+    --color-career: #7f1d1d;
+    --color-prep: #312e81;
+    --color-builder: #000000;
+
+    /* Shadcn UI Variables (from Job Tracker) */
+    --background: 31 8% 96%;
+    --foreground: 0 0% 7%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 7%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 7%;
+    --primary: 0 100% 27%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 7%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 100% 27%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 30 8% 82%;
+    --input: 30 8% 82%;
+    --ring: 0 100% 27%;
+    --radius: 4px;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+    /* Original styles, if not overridden by @apply */
+    /* background-color: #f9f9f9; */
+    /* color: #111827; */
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-semibold;
+    /* Original styles, if not overridden by @apply */
+    /* @apply font-serif tracking-tight font-bold; */
+  }
+}
+
+
+@media print {
+  @page {
+    margin: 1cm;
+    size: A4;
+  }
+
+  body {
+    background-color: #FFFFFF !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  nav,
+  button,
+  .no-print,
+  .template-selector,
+  .back-button,
+  footer {
+    display: none !important;
+  }
+
+  /* Reset layout for print */
+  #root,
+  .App {
+    background: white !important;
+    padding: 0 !important;
+    height: auto !important;
+    min-height: auto !important;
+  }
+
+  .preview-container {
+    padding: 0 !important;
+    background: white !important;
+    box-shadow: none !important;
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  .resume-sheet {
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    border: none !important;
+  }
+
+  /* Prevent sections from splitting across pages */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    break-after: avoid;
+  }
+
+  .section-item,
+  .experience-item,
+  .education-item,
+  .project-item {
+    break-inside: avoid;
+    margin-bottom: 12pt;
+  }
+}
